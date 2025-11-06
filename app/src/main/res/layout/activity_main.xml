@@ -129,7 +129,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
-                    android:text="History of \nJP"
+                    android:text="History of \nBuLSU"
                     android:textColor="#333333"
                     android:textSize="12sp"
                     android:gravity="center" />
@@ -155,14 +155,14 @@
                         android:layout_width="32dp"
                         android:layout_height="32dp"
                         android:src="@drawable/ic_history"
-                        android:tint="#004D25" />
+                        app:tint="#004D25" />
                 </LinearLayout>
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
-                    android:text="Staffs ni Robb"
+                    android:text="Staff"
                     android:textColor="#333333"
                     android:textSize="12sp"
                     android:gravity="center" />
