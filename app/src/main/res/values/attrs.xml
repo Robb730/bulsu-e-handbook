@@ -1,0 +1,6 @@
+<resources>
+    <declare-styleable name="CircleButton">
+        <attr name="iconSrc" format="reference" />
+        <attr name="labelText" format="string" />
+    </declare-styleable>
+</resources>
