@@ -58,7 +58,7 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:background="@drawable/banner_gradient"
-            android:padding="16dp"
+            android:padding="1dp"
             android:layout_marginTop="12dp"
             android:elevation="6dp"
             android:clipToOutline="true"
@@ -76,20 +76,22 @@
                     android:layout_height="wrap_content"
                     android:text="Learn more about the university!"
                     android:textColor="@android:color/white"
-                    android:textSize="16sp"
+                    android:textSize="14sp"
+                    android:layout_marginLeft="10dp"
                     android:textStyle="bold" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Bulacan State University Bustos Campus"
+                    android:layout_marginLeft="10dp"
                     android:textColor="@android:color/white"
                     android:textSize="12sp" />
             </LinearLayout>
 
             <ImageView
                 android:layout_width="80dp"
-                android:layout_height="56dp"
+                android:layout_height="80dp"
                 android:src="@drawable/university_building"
                 android:contentDescription="Building" />
         </LinearLayout>
@@ -154,7 +156,7 @@
                     <ImageView
                         android:layout_width="32dp"
                         android:layout_height="32dp"
-                        android:src="@drawable/ic_history"
+                        android:src="@drawable/ic_staffs"
                         app:tint="#004D25" />
                 </LinearLayout>
 
@@ -186,7 +188,7 @@
                     <ImageView
                         android:layout_width="32dp"
                         android:layout_height="32dp"
-                        android:src="@drawable/ic_history"
+                        android:src="@drawable/ic_genpro"
                         android:tint="#004D25" />
                 </LinearLayout>
 
@@ -218,7 +220,7 @@
                     <ImageView
                         android:layout_width="32dp"
                         android:layout_height="32dp"
-                        android:src="@drawable/ic_history"
+                        android:src="@drawable/ic_acad_regulations"
                         android:tint="#004D25" />
                 </LinearLayout>
 
@@ -250,7 +252,7 @@
                     <ImageView
                         android:layout_width="32dp"
                         android:layout_height="32dp"
-                        android:src="@drawable/ic_history"
+                        android:src="@drawable/ic_disc"
                         android:tint="#004D25" />
                 </LinearLayout>
 
@@ -282,7 +284,7 @@
                     <ImageView
                         android:layout_width="32dp"
                         android:layout_height="32dp"
-                        android:src="@drawable/ic_history"
+                        android:src="@drawable/ic_affairs"
                         android:tint="#004D25" />
                 </LinearLayout>
 
@@ -314,7 +316,7 @@
                     <ImageView
                         android:layout_width="32dp"
                         android:layout_height="32dp"
-                        android:src="@drawable/ic_history"
+                        android:src="@drawable/ic_inst"
                         android:tint="#004D25" />
                 </LinearLayout>
 
@@ -346,7 +348,7 @@
                     <ImageView
                         android:layout_width="32dp"
                         android:layout_height="32dp"
-                        android:src="@drawable/ic_history"
+                        android:src="@drawable/ic_hymn"
                         android:tint="#004D25" />
                 </LinearLayout>
 
@@ -378,7 +380,7 @@
                     <ImageView
                         android:layout_width="32dp"
                         android:layout_height="32dp"
-                        android:src="@drawable/ic_history"
+                        android:src="@drawable/ic_program_off"
                         android:tint="#004D25" />
                 </LinearLayout>
 
@@ -410,7 +412,7 @@
                     <ImageView
                         android:layout_width="32dp"
                         android:layout_height="32dp"
-                        android:src="@drawable/ic_history"
+                        android:src="@drawable/ic_course"
                         android:tint="#004D25" />
                 </LinearLayout>
 
@@ -442,7 +444,7 @@
                     <ImageView
                         android:layout_width="32dp"
                         android:layout_height="32dp"
-                        android:src="@drawable/ic_history"
+                        android:src="@drawable/ic_local"
                         android:tint="#004D25" />
                 </LinearLayout>
 
@@ -474,7 +476,7 @@
                     <ImageView
                         android:layout_width="32dp"
                         android:layout_height="32dp"
-                        android:src="@drawable/ic_history"
+                        android:src="@drawable/ic_org"
                         android:tint="#004D25" />
                 </LinearLayout>
 
@@ -506,7 +508,7 @@
                     <ImageView
                         android:layout_width="32dp"
                         android:layout_height="32dp"
-                        android:src="@drawable/ic_history"
+                        android:src="@drawable/ic_directory"
                         android:tint="#004D25" />
                 </LinearLayout>
 
@@ -538,7 +540,7 @@
                     <ImageView
                         android:layout_width="32dp"
                         android:layout_height="32dp"
-                        android:src="@drawable/ic_history"
+                        android:src="@drawable/ic_downloads"
                         android:tint="#004D25" />
                 </LinearLayout>
 
@@ -570,7 +572,7 @@
                     <ImageView
                         android:layout_width="32dp"
                         android:layout_height="32dp"
-                        android:src="@drawable/ic_history"
+                        android:src="@drawable/ic_lsc"
                         android:tint="#004D25" />
                 </LinearLayout>
 
@@ -602,7 +604,7 @@
                     <ImageView
                         android:layout_width="32dp"
                         android:layout_height="32dp"
-                        android:src="@drawable/ic_history"
+                        android:src="@drawable/ic_external"
                         android:tint="#004D25" />
                 </LinearLayout>
 
