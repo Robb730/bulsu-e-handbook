@@ -7,7 +7,10 @@
     android:background="@color/white"
     tools:context=".MainActivity">
 
+
+
     <LinearLayout
+        android:id="@+id/main"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
@@ -114,18 +117,24 @@
                 android:layout_margin="8dp">
 
                 <LinearLayout
+                    android:id="@+id/historyBtn"
                     android:layout_width="64dp"
                     android:layout_height="64dp"
-                    android:gravity="center"
                     android:background="@drawable/circle_bg"
-                    android:backgroundTint="#DDF2E1">
+                    android:backgroundTint="#DDF2E1"
+                    android:gravity="center"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?attr/selectableItemBackgroundBorderless">
 
                     <ImageView
                         android:layout_width="32dp"
                         android:layout_height="32dp"
                         android:src="@drawable/ic_history"
                         app:tint="#004D25" />
+
                 </LinearLayout>
+
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -189,7 +198,7 @@
                         android:layout_width="32dp"
                         android:layout_height="32dp"
                         android:src="@drawable/ic_genpro"
-                        android:tint="#004D25" />
+                        app:tint="#004D25" />
                 </LinearLayout>
 
                 <TextView
@@ -221,7 +230,7 @@
                         android:layout_width="32dp"
                         android:layout_height="32dp"
                         android:src="@drawable/ic_acad_regulations"
-                        android:tint="#004D25" />
+                        app:tint="#004D25" />
                 </LinearLayout>
 
                 <TextView
@@ -253,14 +262,14 @@
                         android:layout_width="32dp"
                         android:layout_height="32dp"
                         android:src="@drawable/ic_disc"
-                        android:tint="#004D25" />
+                        app:tint="#004D25" />
                 </LinearLayout>
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
-                    android:text="Conduct & \nDiscipline"
+                    android:text="Conduct &amp; \nDiscipline"
                     android:textColor="#333333"
                     android:textSize="12sp"
                     android:gravity="center" />
@@ -285,14 +294,14 @@
                         android:layout_width="32dp"
                         android:layout_height="32dp"
                         android:src="@drawable/ic_affairs"
-                        android:tint="#004D25" />
+                        app:tint="#004D25" />
                 </LinearLayout>
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
-                    android:text="Affairs & \nServices"
+                    android:text="Affairs &amp; \nServices"
                     android:textColor="#333333"
                     android:textSize="12sp"
                     android:gravity="center" />
@@ -317,7 +326,7 @@
                         android:layout_width="32dp"
                         android:layout_height="32dp"
                         android:src="@drawable/ic_inst"
-                        android:tint="#004D25" />
+                        app:tint="#004D25" />
                 </LinearLayout>
 
                 <TextView
@@ -349,17 +358,18 @@
                         android:layout_width="32dp"
                         android:layout_height="32dp"
                         android:src="@drawable/ic_hymn"
-                        android:tint="#004D25" />
+                        app:tint="#004D25" />
                 </LinearLayout>
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
-                    android:text="BulSU \nHymnn &\nMarch"
+                    android:text="BulSU \nHymnn &amp;\nMarch"
                     android:textColor="#333333"
                     android:textSize="12sp"
-                    android:gravity="center" />
+                    android:gravity="center"
+                    tools:ignore="HardcodedText" />
             </LinearLayout>
 
 
@@ -381,7 +391,7 @@
                         android:layout_width="32dp"
                         android:layout_height="32dp"
                         android:src="@drawable/ic_program_off"
-                        android:tint="#004D25" />
+                        app:tint="#004D25" />
                 </LinearLayout>
 
                 <TextView
@@ -413,7 +423,7 @@
                         android:layout_width="32dp"
                         android:layout_height="32dp"
                         android:src="@drawable/ic_course"
-                        android:tint="#004D25" />
+                        app:tint="#004D25" />
                 </LinearLayout>
 
                 <TextView
@@ -445,7 +455,7 @@
                         android:layout_width="32dp"
                         android:layout_height="32dp"
                         android:src="@drawable/ic_local"
-                        android:tint="#004D25" />
+                        app:tint="#004D25" />
                 </LinearLayout>
 
                 <TextView
@@ -477,7 +487,7 @@
                         android:layout_width="32dp"
                         android:layout_height="32dp"
                         android:src="@drawable/ic_org"
-                        android:tint="#004D25" />
+                        app:tint="#004D25" />
                 </LinearLayout>
 
                 <TextView
@@ -509,7 +519,7 @@
                         android:layout_width="32dp"
                         android:layout_height="32dp"
                         android:src="@drawable/ic_directory"
-                        android:tint="#004D25" />
+                        app:tint="#004D25" />
                 </LinearLayout>
 
                 <TextView
@@ -541,7 +551,7 @@
                         android:layout_width="32dp"
                         android:layout_height="32dp"
                         android:src="@drawable/ic_downloads"
-                        android:tint="#004D25" />
+                        app:tint="#004D25" />
                 </LinearLayout>
 
                 <TextView
@@ -573,7 +583,7 @@
                         android:layout_width="32dp"
                         android:layout_height="32dp"
                         android:src="@drawable/ic_lsc"
-                        android:tint="#004D25" />
+                        app:tint="#004D25" />
                 </LinearLayout>
 
                 <TextView
@@ -605,7 +615,7 @@
                         android:layout_width="32dp"
                         android:layout_height="32dp"
                         android:src="@drawable/ic_external"
-                        android:tint="#004D25" />
+                        app:tint="#004D25" />
                 </LinearLayout>
 
                 <TextView
