@@ -140,7 +140,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
-                    android:text="History of \nHensley"
+                    android:text="History of \nBulsu"
                     android:textColor="#333333"
                     android:textSize="12sp"
                     android:gravity="center" />
