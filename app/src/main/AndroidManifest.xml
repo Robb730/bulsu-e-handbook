@@ -12,6 +12,21 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.BulsuStudentHandbook">
         <activity
+            android:name=".CobaStaffs"
+            android:exported="false" />
+        <activity
+            android:name=".CitStaffs"
+            android:exported="false" />
+        <activity
+            android:name=".CoeStaffs"
+            android:exported="false" />
+        <activity
+            android:name=".CictStaffs"
+            android:exported="false" />
+        <activity
+            android:name=".GeneralPrevisions"
+            android:exported="false" />
+        <activity
             android:name=".Staffs"
             android:exported="false" />
         <activity

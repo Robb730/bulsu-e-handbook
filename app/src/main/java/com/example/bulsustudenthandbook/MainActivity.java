@@ -19,6 +19,7 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 public class MainActivity extends AppCompatActivity {
 
     LinearLayout history;
+    LinearLayout staff;
     FloatingActionButton scheduleBtn;
 
 
@@ -35,6 +36,17 @@ public class MainActivity extends AppCompatActivity {
         });
 
         history = findViewById(R.id.historyBtn);
+
+        staff = findViewById(R.id.staffsBtn);
+
+        staff.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, Staffs.class);
+                startActivity(intent);
+            }
+        });
+
         scheduleBtn = findViewById(R.id.scheduleBtn);
 
         scheduleBtn.setOnClickListener(new View.OnClickListener() {

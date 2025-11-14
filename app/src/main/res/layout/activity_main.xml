@@ -162,11 +162,12 @@
                 android:layout_margin="8dp">
 
                 <LinearLayout
+                    android:id="@+id/staffsBtn"
                     android:layout_width="56dp"
                     android:layout_height="56dp"
-                    android:gravity="center"
                     android:background="@drawable/circle_bg"
-                    android:backgroundTint="#DDF2E1">
+                    android:backgroundTint="#DDF2E1"
+                    android:gravity="center">
 
                     <ImageView
                         android:layout_width="32dp"
