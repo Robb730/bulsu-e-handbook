@@ -1,0 +1,367 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F5F5"
+    android:id="@+id/main">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Header Card -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="4dp"
+            app:cardBackgroundColor="#2E7D32">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="📅 Weekly Schedule"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/white"
+                    android:layout_gravity="center_horizontal"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Plan your week effectively"
+                    android:textSize="14sp"
+                    android:textColor="#C8E6C9"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="4dp"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Schedule Grid Card -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="4dp"
+            app:cardBackgroundColor="@android:color/white">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="12dp">
+
+                <!-- Days Header -->
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scrollbars="none">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <!-- Days Header -->
+                        <GridLayout
+                            android:id="@+id/gridHeader"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:columnCount="8"
+                            android:orientation="horizontal">
+
+                            <TextView android:layout_width="80dp" android:layout_height="wrap_content" android:text="Time" android:gravity="center" android:padding="12dp" android:textStyle="bold" android:textSize="12sp" android:textColor="#424242" android:background="#E8F5E9"/>
+                            <!-- Your "Time", "Mon", "Tue", ... TextViews -->
+                            <TextView android:layout_width="90dp" android:layout_height="wrap_content" android:text="Mon" android:gravity="center" android:padding="12dp" android:textStyle="bold" android:textSize="13sp" android:textColor="@android:color/white" android:background="#43A047"/> <TextView android:layout_width="90dp" android:layout_height="wrap_content" android:text="Tue" android:gravity="center" android:padding="12dp" android:textStyle="bold" android:textSize="13sp" android:textColor="@android:color/white" android:background="#43A047"/> <TextView android:layout_width="90dp" android:layout_height="wrap_content" android:text="Wed" android:gravity="center" android:padding="12dp" android:textStyle="bold" android:textSize="13sp" android:textColor="@android:color/white" android:background="#43A047"/> <TextView android:layout_width="90dp" android:layout_height="wrap_content" android:text="Thu" android:gravity="center" android:padding="12dp" android:textStyle="bold" android:textSize="13sp" android:textColor="@android:color/white" android:background="#43A047"/> <TextView android:layout_width="90dp" android:layout_height="wrap_content" android:text="Fri" android:gravity="center" android:padding="12dp" android:textStyle="bold" android:textSize="13sp" android:textColor="@android:color/white" android:background="#43A047"/> <TextView android:layout_width="90dp" android:layout_height="wrap_content" android:text="Sat" android:gravity="center" android:padding="12dp" android:textStyle="bold" android:textSize="13sp" android:textColor="@android:color/white" android:background="#66BB6A"/> <TextView android:layout_width="90dp" android:layout_height="wrap_content" android:text="Sun" android:gravity="center" android:padding="12dp" android:textStyle="bold" android:textSize="13sp" android:textColor="@android:color/white" android:background="#81C784"/>
+                        </GridLayout>
+
+                        <!-- Calendar Grid -->
+                        <GridLayout
+                            android:id="@+id/gridCalendar"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:columnCount="8"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="2dp">
+
+                            <TextView
+                                android:layout_width="80dp"
+                                android:layout_height="70dp"
+                                android:gravity="center"
+                                android:text="6:00 AM -\n7:00 AM"
+                                android:background="#FAFAFA"
+                                android:textSize="11sp"
+                                android:textStyle="bold"
+                                android:textColor="#616161"
+                                android:layout_margin="1dp"/>
+                            <TextView android:layout_width="90dp" android:layout_height="70dp" android:background="@android:color/white" android:layout_margin="1dp"/>
+                            <TextView android:layout_width="90dp" android:layout_height="70dp" android:background="@android:color/white" android:layout_margin="1dp"/>
+                            <TextView android:layout_width="90dp" android:layout_height="70dp" android:background="@android:color/white" android:layout_margin="1dp"/>
+                            <TextView android:layout_width="90dp" android:layout_height="70dp" android:background="@android:color/white" android:layout_margin="1dp"/>
+                            <TextView android:layout_width="90dp" android:layout_height="70dp" android:background="@android:color/white" android:layout_margin="1dp"/>
+                            <TextView android:layout_width="90dp" android:layout_height="70dp" android:background="#F1F8E9" android:layout_margin="1dp"/>
+                            <TextView android:layout_width="90dp" android:layout_height="70dp" android:background="#F1F8E9" android:layout_margin="1dp"/>
+
+                            <!-- 7:00 AM -->
+                            <TextView
+                                android:layout_width="80dp"
+                                android:layout_height="70dp"
+                                android:gravity="center"
+                                android:text="7:00 AM -\n 8:00 AM"
+                                android:background="#FAFAFA"
+                                android:textSize="11sp"
+                                android:textStyle="bold"
+                                android:textColor="#616161"
+                                android:layout_margin="1dp"/>
+                            <TextView android:layout_width="90dp" android:layout_height="70dp" android:background="@android:color/white" android:layout_margin="1dp"/>
+                            <TextView android:layout_width="90dp" android:layout_height="70dp" android:background="@android:color/white" android:layout_margin="1dp"/>
+                            <TextView android:layout_width="90dp" android:layout_height="70dp" android:background="@android:color/white" android:layout_margin="1dp"/>
+                            <TextView android:layout_width="90dp" android:layout_height="70dp" android:background="@android:color/white" android:layout_margin="1dp"/>
+                            <TextView android:layout_width="90dp" android:layout_height="70dp" android:background="@android:color/white" android:layout_margin="1dp"/>
+                            <TextView android:layout_width="90dp" android:layout_height="70dp" android:background="#F1F8E9" android:layout_margin="1dp"/>
+                            <TextView android:layout_width="90dp" android:layout_height="70dp" android:background="#F1F8E9" android:layout_margin="1dp"/>
+
+                            <!-- Continue pattern for remaining hours -->
+                            <!-- 8:00 AM -->
+                            <TextView android:layout_width="80dp" android:layout_height="70dp" android:gravity="center" android:text="8:00 AM - \n9:00AM" android:background="#FAFAFA" android:textSize="11sp" android:textStyle="bold" android:textColor="#616161" android:layout_margin="1dp"/>
+                            <TextView android:layout_width="90dp" android:layout_height="70dp" android:background="@android:color/white" android:layout_margin="1dp"/>
+                            <TextView android:layout_width="90dp" android:layout_height="70dp" android:background="@android:color/white" android:layout_margin="1dp"/>
+                            <TextView android:layout_width="90dp" android:layout_height="70dp" android:background="@android:color/white" android:layout_margin="1dp"/>
+                            <TextView android:layout_width="90dp" android:layout_height="70dp" android:background="@android:color/white" android:layout_margin="1dp"/>
+                            <TextView android:layout_width="90dp" android:layout_height="70dp" android:background="@android:color/white" android:layout_margin="1dp"/>
+                            <TextView android:layout_width="90dp" android:layout_height="70dp" android:background="#F1F8E9" android:layout_margin="1dp"/>
+                            <TextView android:layout_width="90dp" android:layout_height="70dp" android:background="#F1F8E9" android:layout_margin="1dp"/>
+
+                            <TextView android:layout_width="80dp" android:layout_height="70dp" android:gravity="center" android:text="9:00 AM - \n10:00AM" android:background="#FAFAFA" android:textSize="11sp" android:textStyle="bold" android:textColor="#616161" android:layout_margin="1dp"/>
+                            <TextView android:layout_width="90dp" android:layout_height="70dp" android:background="@android:color/white" android:layout_margin="1dp"/>
+                            <TextView android:layout_width="90dp" android:layout_height="70dp" android:background="@android:color/white" android:layout_margin="1dp"/>
+                            <TextView android:layout_width="90dp" android:layout_height="70dp" android:background="@android:color/white" android:layout_margin="1dp"/>
+                            <TextView android:layout_width="90dp" android:layout_height="70dp" android:background="@android:color/white" android:layout_margin="1dp"/>
+                            <TextView android:layout_width="90dp" android:layout_height="70dp" android:background="@android:color/white" android:layout_margin="1dp"/>
+                            <TextView android:layout_width="90dp" android:layout_height="70dp" android:background="#F1F8E9" android:layout_margin="1dp"/>
+                            <TextView android:layout_width="90dp" android:layout_height="70dp" android:background="#F1F8E9" android:layout_margin="1dp"/>
+
+                            <TextView android:layout_width="80dp" android:layout_height="70dp" android:gravity="center" android:text="10:00 AM - \n11:00AM" android:background="#FAFAFA" android:textSize="11sp" android:textStyle="bold" android:textColor="#616161" android:layout_margin="1dp"/>
+                            <TextView android:layout_width="90dp" android:layout_height="70dp" android:background="@android:color/white" android:layout_margin="1dp"/>
+                            <TextView android:layout_width="90dp" android:layout_height="70dp" android:background="@android:color/white" android:layout_margin="1dp"/>
+                            <TextView android:layout_width="90dp" android:layout_height="70dp" android:background="@android:color/white" android:layout_margin="1dp"/>
+                            <TextView android:layout_width="90dp" android:layout_height="70dp" android:background="@android:color/white" android:layout_margin="1dp"/>
+                            <TextView android:layout_width="90dp" android:layout_height="70dp" android:background="@android:color/white" android:layout_margin="1dp"/>
+                            <TextView android:layout_width="90dp" android:layout_height="70dp" android:background="#F1F8E9" android:layout_margin="1dp"/>
+                            <TextView android:layout_width="90dp" android:layout_height="70dp" android:background="#F1F8E9" android:layout_margin="1dp"/>
+
+                            <TextView android:layout_width="80dp" android:layout_height="70dp" android:gravity="center" android:text="11:00 AM - \n12:00PM" android:background="#FAFAFA" android:textSize="11sp" android:textStyle="bold" android:textColor="#616161" android:layout_margin="1dp"/>
+                            <TextView android:layout_width="90dp" android:layout_height="70dp" android:background="@android:color/white" android:layout_margin="1dp"/>
+                            <TextView android:layout_width="90dp" android:layout_height="70dp" android:background="@android:color/white" android:layout_margin="1dp"/>
+                            <TextView android:layout_width="90dp" android:layout_height="70dp" android:background="@android:color/white" android:layout_margin="1dp"/>
+                            <TextView android:layout_width="90dp" android:layout_height="70dp" android:background="@android:color/white" android:layout_margin="1dp"/>
+                            <TextView android:layout_width="90dp" android:layout_height="70dp" android:background="@android:color/white" android:layout_margin="1dp"/>
+                            <TextView android:layout_width="90dp" android:layout_height="70dp" android:background="#F1F8E9" android:layout_margin="1dp"/>
+                            <TextView android:layout_width="90dp" android:layout_height="70dp" android:background="#F1F8E9" android:layout_margin="1dp"/>
+
+                            <TextView android:layout_width="80dp" android:layout_height="70dp" android:gravity="center" android:text="12:00 PM - \n1:00PM" android:background="#FAFAFA" android:textSize="11sp" android:textStyle="bold" android:textColor="#616161" android:layout_margin="1dp"/>
+                            <TextView android:layout_width="90dp" android:layout_height="70dp" android:background="@android:color/white" android:layout_margin="1dp"/>
+                            <TextView android:layout_width="90dp" android:layout_height="70dp" android:background="@android:color/white" android:layout_margin="1dp"/>
+                            <TextView android:layout_width="90dp" android:layout_height="70dp" android:background="@android:color/white" android:layout_margin="1dp"/>
+                            <TextView android:layout_width="90dp" android:layout_height="70dp" android:background="@android:color/white" android:layout_margin="1dp"/>
+                            <TextView android:layout_width="90dp" android:layout_height="70dp" android:background="@android:color/white" android:layout_margin="1dp"/>
+                            <TextView android:layout_width="90dp" android:layout_height="70dp" android:background="#F1F8E9" android:layout_margin="1dp"/>
+                            <TextView android:layout_width="90dp" android:layout_height="70dp" android:background="#F1F8E9" android:layout_margin="1dp"/>
+
+                            <TextView android:layout_width="80dp" android:layout_height="70dp" android:gravity="center" android:text="1:00 PM - \n2:00PM" android:background="#FAFAFA" android:textSize="11sp" android:textStyle="bold" android:textColor="#616161" android:layout_margin="1dp"/>
+                            <TextView android:layout_width="90dp" android:layout_height="70dp" android:background="@android:color/white" android:layout_margin="1dp"/>
+                            <TextView android:layout_width="90dp" android:layout_height="70dp" android:background="@android:color/white" android:layout_margin="1dp"/>
+                            <TextView android:layout_width="90dp" android:layout_height="70dp" android:background="@android:color/white" android:layout_margin="1dp"/>
+                            <TextView android:layout_width="90dp" android:layout_height="70dp" android:background="@android:color/white" android:layout_margin="1dp"/>
+                            <TextView android:layout_width="90dp" android:layout_height="70dp" android:background="@android:color/white" android:layout_margin="1dp"/>
+                            <TextView android:layout_width="90dp" android:layout_height="70dp" android:background="#F1F8E9" android:layout_margin="1dp"/>
+                            <TextView android:layout_width="90dp" android:layout_height="70dp" android:background="#F1F8E9" android:layout_margin="1dp"/>
+
+                            <TextView android:layout_width="80dp" android:layout_height="70dp" android:gravity="center" android:text="2:00 PM - \n3:00PM" android:background="#FAFAFA" android:textSize="11sp" android:textStyle="bold" android:textColor="#616161" android:layout_margin="1dp"/>
+                            <TextView android:layout_width="90dp" android:layout_height="70dp" android:background="@android:color/white" android:layout_margin="1dp"/>
+                            <TextView android:layout_width="90dp" android:layout_height="70dp" android:background="@android:color/white" android:layout_margin="1dp"/>
+                            <TextView android:layout_width="90dp" android:layout_height="70dp" android:background="@android:color/white" android:layout_margin="1dp"/>
+                            <TextView android:layout_width="90dp" android:layout_height="70dp" android:background="@android:color/white" android:layout_margin="1dp"/>
+                            <TextView android:layout_width="90dp" android:layout_height="70dp" android:background="@android:color/white" android:layout_margin="1dp"/>
+                            <TextView android:layout_width="90dp" android:layout_height="70dp" android:background="#F1F8E9" android:layout_margin="1dp"/>
+                            <TextView android:layout_width="90dp" android:layout_height="70dp" android:background="#F1F8E9" android:layout_margin="1dp"/>
+
+                            <TextView android:layout_width="80dp" android:layout_height="70dp" android:gravity="center" android:text="3:00 PM - \n4:00PM" android:background="#FAFAFA" android:textSize="11sp" android:textStyle="bold" android:textColor="#616161" android:layout_margin="1dp"/>
+                            <TextView android:layout_width="90dp" android:layout_height="70dp" android:background="@android:color/white" android:layout_margin="1dp"/>
+                            <TextView android:layout_width="90dp" android:layout_height="70dp" android:background="@android:color/white" android:layout_margin="1dp"/>
+                            <TextView android:layout_width="90dp" android:layout_height="70dp" android:background="@android:color/white" android:layout_margin="1dp"/>
+                            <TextView android:layout_width="90dp" android:layout_height="70dp" android:background="@android:color/white" android:layout_margin="1dp"/>
+                            <TextView android:layout_width="90dp" android:layout_height="70dp" android:background="@android:color/white" android:layout_margin="1dp"/>
+                            <TextView android:layout_width="90dp" android:layout_height="70dp" android:background="#F1F8E9" android:layout_margin="1dp"/>
+                            <TextView android:layout_width="90dp" android:layout_height="70dp" android:background="#F1F8E9" android:layout_margin="1dp"/>
+
+                            <TextView android:layout_width="80dp" android:layout_height="70dp" android:gravity="center" android:text="4:00 PM - \n5:00PM" android:background="#FAFAFA" android:textSize="11sp" android:textStyle="bold" android:textColor="#616161" android:layout_margin="1dp"/>
+                            <TextView android:layout_width="90dp" android:layout_height="70dp" android:background="@android:color/white" android:layout_margin="1dp"/>
+                            <TextView android:layout_width="90dp" android:layout_height="70dp" android:background="@android:color/white" android:layout_margin="1dp"/>
+                            <TextView android:layout_width="90dp" android:layout_height="70dp" android:background="@android:color/white" android:layout_margin="1dp"/>
+                            <TextView android:layout_width="90dp" android:layout_height="70dp" android:background="@android:color/white" android:layout_margin="1dp"/>
+                            <TextView android:layout_width="90dp" android:layout_height="70dp" android:background="@android:color/white" android:layout_margin="1dp"/>
+                            <TextView android:layout_width="90dp" android:layout_height="70dp" android:background="#F1F8E9" android:layout_margin="1dp"/>
+                            <TextView android:layout_width="90dp" android:layout_height="70dp" android:background="#F1F8E9" android:layout_margin="1dp"/>
+
+                            <TextView android:layout_width="80dp" android:layout_height="70dp" android:gravity="center" android:text="5:00 PM - \n6:00PM" android:background="#FAFAFA" android:textSize="11sp" android:textStyle="bold" android:textColor="#616161" android:layout_margin="1dp"/>
+                            <TextView android:layout_width="90dp" android:layout_height="70dp" android:background="@android:color/white" android:layout_margin="1dp"/>
+                            <TextView android:layout_width="90dp" android:layout_height="70dp" android:background="@android:color/white" android:layout_margin="1dp"/>
+                            <TextView android:layout_width="90dp" android:layout_height="70dp" android:background="@android:color/white" android:layout_margin="1dp"/>
+                            <TextView android:layout_width="90dp" android:layout_height="70dp" android:background="@android:color/white" android:layout_margin="1dp"/>
+                            <TextView android:layout_width="90dp" android:layout_height="70dp" android:background="@android:color/white" android:layout_margin="1dp"/>
+                            <TextView android:layout_width="90dp" android:layout_height="70dp" android:background="#F1F8E9" android:layout_margin="1dp"/>
+                            <TextView android:layout_width="90dp" android:layout_height="70dp" android:background="#F1F8E9" android:layout_margin="1dp"/>
+
+                            <TextView android:layout_width="80dp" android:layout_height="70dp" android:gravity="center" android:text="6:00 PM - \n7:00PM" android:background="#FAFAFA" android:textSize="11sp" android:textStyle="bold" android:textColor="#616161" android:layout_margin="1dp"/>
+                            <TextView android:layout_width="90dp" android:layout_height="70dp" android:background="@android:color/white" android:layout_margin="1dp"/>
+                            <TextView android:layout_width="90dp" android:layout_height="70dp" android:background="@android:color/white" android:layout_margin="1dp"/>
+                            <TextView android:layout_width="90dp" android:layout_height="70dp" android:background="@android:color/white" android:layout_margin="1dp"/>
+                            <TextView android:layout_width="90dp" android:layout_height="70dp" android:background="@android:color/white" android:layout_margin="1dp"/>
+                            <TextView android:layout_width="90dp" android:layout_height="70dp" android:background="@android:color/white" android:layout_margin="1dp"/>
+                            <TextView android:layout_width="90dp" android:layout_height="70dp" android:background="#F1F8E9" android:layout_margin="1dp"/>
+                            <TextView android:layout_width="90dp" android:layout_height="70dp" android:background="#F1F8E9" android:layout_margin="1dp"/>
+
+                            <TextView android:layout_width="80dp" android:layout_height="70dp" android:gravity="center" android:text="7:00 PM - \n8:00PM" android:background="#FAFAFA" android:textSize="11sp" android:textStyle="bold" android:textColor="#616161" android:layout_margin="1dp"/>
+                            <TextView android:layout_width="90dp" android:layout_height="70dp" android:background="@android:color/white" android:layout_margin="1dp"/>
+                            <TextView android:layout_width="90dp" android:layout_height="70dp" android:background="@android:color/white" android:layout_margin="1dp"/>
+                            <TextView android:layout_width="90dp" android:layout_height="70dp" android:background="@android:color/white" android:layout_margin="1dp"/>
+                            <TextView android:layout_width="90dp" android:layout_height="70dp" android:background="@android:color/white" android:layout_margin="1dp"/>
+                            <TextView android:layout_width="90dp" android:layout_height="70dp" android:background="@android:color/white" android:layout_margin="1dp"/>
+                            <TextView android:layout_width="90dp" android:layout_height="70dp" android:background="#F1F8E9" android:layout_margin="1dp"/>
+                            <TextView android:layout_width="90dp" android:layout_height="70dp" android:background="#F1F8E9" android:layout_margin="1dp"/>
+
+                            <!-- Your time slots -->
+                        </GridLayout>
+
+                    </LinearLayout>
+                </HorizontalScrollView>
+
+                <!-- Calendar Grid with Scroll -->
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Add Schedule Card -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="4dp"
+            app:cardBackgroundColor="@android:color/white">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="➕ Add New Class"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="#2E7D32"
+                    android:layout_marginBottom="16dp"/>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp"
+                    android:hint="Subject Code"
+                    app:boxBackgroundMode="outline"
+                    app:boxStrokeColor="#2E7D32"
+                    app:hintTextColor="#2E7D32">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/editSubjectCode"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textCapCharacters"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp"
+                    android:hint="Subject Name"
+                    app:boxBackgroundMode="outline"
+                    app:boxStrokeColor="#2E7D32"
+                    app:hintTextColor="#2E7D32">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/editSubjectName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textCapWords"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp"
+                    android:hint="Select Day"
+                    app:boxBackgroundMode="outline"
+                    app:boxStrokeColor="#2E7D32"
+                    app:hintTextColor="#2E7D32">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/editDay"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:focusable="false"
+                        android:clickable="true"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:hint="Select Time"
+                    app:boxBackgroundMode="outline"
+                    app:boxStrokeColor="#2E7D32"
+                    app:hintTextColor="#2E7D32"
+                    app:endIconMode="custom"
+                    app:endIconDrawable="@android:drawable/ic_menu_recent_history">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/editTime"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:focusable="false"
+                        android:clickable="true"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+
+                <Button
+                    android:id="@+id/btnSaveSchedule"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:text="💾 Save Schedule"
+                    android:backgroundTint="#2E7D32"
+                    android:textColor="@android:color/white"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:cornerRadius="8dp"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+</ScrollView>
