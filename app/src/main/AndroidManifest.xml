@@ -12,6 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.BulsuStudentHandbook">
         <activity
+            android:name=".ConductDiscipline"
             android:name=".Staffs"
             android:exported="false" />
         <activity
