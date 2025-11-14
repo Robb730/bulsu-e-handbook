@@ -27,6 +27,7 @@
             android:name=".GeneralPrevisions"
             android:exported="false" />
         <activity
+            android:name=".ConductDiscipline"
             android:name=".Staffs"
             android:exported="false" />
         <activity
