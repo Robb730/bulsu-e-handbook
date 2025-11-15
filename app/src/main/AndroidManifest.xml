@@ -23,12 +23,14 @@
         <activity
             android:name=".CictStaffs"
             android:exported="false" />
+
         <activity
-            android:name=".GeneralPrevisions"
+
+            android:name=".Staffs"
             android:exported="false" />
         <activity
+
             android:name=".ConductDiscipline"
-            android:name=".Staffs"
             android:exported="false" />
         <activity
             android:name=".Schedule"
