@@ -40,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
         history = findViewById(R.id.historyBtn);
 
         staff = findViewById(R.id.staffsBtn);
-        generalProvBtn = findViewById(R.id.generalProvBtn)
+        generalProvBtn = findViewById(R.id.generalProvBtn);
 
         staff.setOnClickListener(new View.OnClickListener() {
             @Override
