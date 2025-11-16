@@ -26,8 +26,8 @@
         <!-- 🔙 Back Button -->
         <ImageButton
             android:id="@+id/backButton"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
             android:background="?attr/selectableItemBackgroundBorderless"
             android:src="@drawable/back_icon"
             android:contentDescription="Back"

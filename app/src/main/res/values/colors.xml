@@ -2,4 +2,7 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="greentealtxtheader">#1F9C67</color>
+    <color name="greentealbg">#1F9C67</color>
+
 </resources>
