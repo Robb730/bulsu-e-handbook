@@ -11,51 +11,45 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.BulsuStudentHandbook">
-
+        <activity
+            android:name=".trykolang"
+            android:exported="false" />
         <activity
             android:name=".CobaStaffs"
             android:exported="false" />
-
         <activity
             android:name=".CitStaffs"
             android:exported="false" />
-
         <activity
             android:name=".CoeStaffs"
             android:exported="false" />
-
         <activity
             android:name=".CictStaffs"
             android:exported="false" />
-
         <activity
             android:name=".Staffs"
-            android:exported="false" />
-        <!-- FIXED: Removed duplicate android:name -->
+            android:exported="false" /> <!-- FIXED: Removed duplicate android:name -->
         <activity
             android:name=".ConductDiscipline"
             android:exported="false" />
-
         <activity
             android:name=".Schedule"
             android:exported="false" />
-
         <activity
             android:name=".programofferings"
             android:exported="false" />
         <activity
             android:name=".History"
             android:exported="false" />
-
         <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
     </application>
 
 </manifest>
