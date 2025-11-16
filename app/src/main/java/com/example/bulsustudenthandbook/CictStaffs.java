@@ -1,7 +1,9 @@
 package com.example.bulsustudenthandbook;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 
 import androidx.activity.EdgeToEdge;
@@ -12,7 +14,7 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class CictStaffs extends AppCompatActivity {
 
-
+    ImageButton backBtn;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,6 +24,15 @@ public class CictStaffs extends AppCompatActivity {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
+        });
+
+        backBtn = findViewById(R.id.backButton);
+        backBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(CictStaffs.this, Staffs.class);
+                startActivity(intent);
+            }
         });
 
     }

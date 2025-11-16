@@ -21,6 +21,8 @@ public class MainActivity extends AppCompatActivity {
     LinearLayout history;
     LinearLayout staff;
     FloatingActionButton scheduleBtn;
+    LinearLayout generalProvBtn;
+
 
 
     @Override
@@ -38,6 +40,7 @@ public class MainActivity extends AppCompatActivity {
         history = findViewById(R.id.historyBtn);
 
         staff = findViewById(R.id.staffsBtn);
+        generalProvBtn = findViewById(R.id.generalProvBtn)
 
         staff.setOnClickListener(new View.OnClickListener() {
             @Override

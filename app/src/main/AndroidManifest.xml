@@ -29,12 +29,10 @@
             android:exported="false" />
 
         <activity
-
             android:name=".Staffs"
             android:exported="false" />
         <!-- FIXED: Removed duplicate android:name -->
         <activity
-
             android:name=".ConductDiscipline"
             android:exported="false" />
 

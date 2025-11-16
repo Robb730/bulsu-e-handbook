@@ -1,3 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
+    <!-- Day Header (Mon, Tue, etc.) -->
+    <style name="DayHeader">
+        <item name="android:layout_width">80dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:background">#E0E0E0</item>
+        <item name="android:padding">8dp</item>
+        <item name="android:layout_margin">1dp</item>
+    </style>
+
+    <!-- Fixed Time Column row -->
+    <style name="TimeSlot">
+        <item name="android:layout_width">80dp</item>
+        <item name="android:layout_height">50dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">#EEEEEE</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:layout_marginBottom">1dp</item>
+        <item name="android:padding">4dp</item>
+    </style>
+
+    <!-- Schedule Grid Cell -->
+    <style name="ScheduleCell">
+        <item name="android:layout_width">80dp</item>
+        <item name="android:layout_height">50dp</item>
+        <item name="android:background">#FFFFFF</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_margin">1dp</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:padding">4dp</item>
+    </style>
+
 </resources>

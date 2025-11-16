@@ -5,6 +5,7 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.Button;
@@ -54,18 +55,37 @@ public class Schedule extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-
+        setContentView(R.layout.activity_schedule); // ONLY ONCE
 
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_schedule); // FIRST
 
+        // Initialize scroll views
+        SyncHorizontalScrollView headerScroll = findViewById(R.id.hScrollHeader);
+        SyncHorizontalScrollView gridScroll = findViewById(R.id.hScrollGrid);
+
+        // DEBUG log
+        Log.d("Schedule", "headerScroll=" + headerScroll + ", gridScroll=" + gridScroll);
+
+        // Link the scroll views
+        if (headerScroll != null && gridScroll != null) {
+            headerScroll.setPartnerScrollView(gridScroll);
+            gridScroll.setPartnerScrollView(headerScroll);
+        } else {
+            Log.e("Schedule", "One of the scroll views is null!");
+        }
+
+        // Initialize other UI components
         editDay = findViewById(R.id.editDay);
-
         editDay.setOnClickListener(v -> showDayPicker());
 
+        editSubjectCode = findViewById(R.id.editSubjectCode);
+        editSubjectName = findViewById(R.id.editSubjectName);
+        editTime = findViewById(R.id.editTime);
+        btnSaveSchedule = findViewById(R.id.btnSaveSchedule);
 
-        // initialize DB
+        editTime.setOnClickListener(v -> showTimePicker());
+
+        // Initialize database
         dbHelper = new ScheduleDBHelper(this);
 
         // Fix inset crash
@@ -150,43 +170,56 @@ public class Schedule extends AppCompatActivity {
     public void loadScheduleIntoGrid() {
         GridLayout gridCalendar = findViewById(R.id.gridCalendar);
 
-        // Clear previous schedule
-        for (int i = 0; i < gridCalendar.getChildCount(); i++) {
-            if (i % 8 != 0) {  // don't clear "Time" column
-                TextView cell = (TextView) gridCalendar.getChildAt(i);
+        int rowCount = 14;
+        int colCount = 7;
+
+        // -----------------------------------
+        // 1. CLEAR ALL CELLS
+        // -----------------------------------
+        for (int row = 0; row < rowCount; row++) {
+            for (int col = 0; col < colCount; col++) {
+                int index = row * colCount + col;
+                TextView cell = (TextView) gridCalendar.getChildAt(index);
                 cell.setText("");
                 cell.setBackgroundColor(Color.WHITE);
             }
         }
 
+        // -----------------------------------
+        // 2. LOAD DATA FROM DATABASE
+        // -----------------------------------
         SQLiteDatabase db = dbHelper.getReadableDatabase();
         Cursor cursor = db.rawQuery("SELECT * FROM classes", null);
 
         while (cursor.moveToNext()) {
+
             String code = cursor.getString(1);
             String name = cursor.getString(2);
             String day = cursor.getString(3);
-            String timeRange = cursor.getString(4); // e.g., "7:00 AM - 10:00 AM"
+            String timeRange = cursor.getString(4);
 
             String[] parts = timeRange.split(" - ");
             String startTime = parts[0];
             String endTime = parts[1];
 
-            int col = dayMap.get(day);
-            int startRow = timeMap.get(startTime);
-            int endRow = timeMap.get(endTime); // use end index as exclusive
+            int col = dayMap.get(day) - 1;        // column 0–6
+            int startRow = timeMap.get(startTime); // row
+            int endRow = timeMap.get(endTime);     // row
 
             for (int row = startRow; row < endRow; row++) {
-                int index = (row * 8) + col;
+
+                int index = row * colCount + col;
                 TextView cell = (TextView) gridCalendar.getChildAt(index);
-                cell.setText(code + "\n" + name);
+
+                cell.setText(code);
                 cell.setBackgroundColor(Color.parseColor("#C8E6C9"));
             }
         }
 
-
         cursor.close();
     }
+
+
     private void showTimePicker() {
         String[] times = {
                 "6:00 AM", "7:00 AM", "8:00 AM", "9:00 AM",
