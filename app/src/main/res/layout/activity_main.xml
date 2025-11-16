@@ -370,6 +370,7 @@
                     android:padding="4dp">
 
                     <LinearLayout
+                        android:id="@+id/hymnBtn"
                         android:layout_width="56dp"
                         android:layout_height="56dp"
                         android:gravity="center"

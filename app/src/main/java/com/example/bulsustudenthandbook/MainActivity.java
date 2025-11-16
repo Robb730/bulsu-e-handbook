@@ -22,8 +22,7 @@ public class MainActivity extends AppCompatActivity {
     LinearLayout staff;
     FloatingActionButton scheduleBtn;
     LinearLayout generalProvBtn;
-
-
+    LinearLayout hymnBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,9 +37,17 @@ public class MainActivity extends AppCompatActivity {
         });
 
         history = findViewById(R.id.historyBtn);
-
         staff = findViewById(R.id.staffsBtn);
         generalProvBtn = findViewById(R.id.generalProvBtn);
+        hymnBtn = findViewById(R.id.hymnBtn);
+
+        hymnBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, BulsuHymnMarch.class);
+                startActivity(intent);
+            }
+        });
 
         staff.setOnClickListener(new View.OnClickListener() {
             @Override
