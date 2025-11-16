@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.BulsuStudentHandbook">
         <activity
+            android:name=".LSC"
+            android:exported="false" />
+        <activity
             android:name=".trykolang"
             android:exported="false" />
         <activity
