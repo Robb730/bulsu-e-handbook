@@ -12,6 +12,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.BulsuStudentHandbook">
         <activity
+            android:name=".BulsuHymnMarch"
+            android:exported="false" />
+        <activity
+            android:name=".bulsu_hymn_march"
+            android:exported="false" />
+        <activity
             android:name=".trykolang"
             android:exported="false" />
         <activity
